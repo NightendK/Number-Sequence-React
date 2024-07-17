@@ -9,7 +9,6 @@ interface NumberInputInterface {
     icon?: 'number' | 'height' | 'width';
 }
 
-
 const icons = {
     number: faTerminal,
     height: faPencil,
