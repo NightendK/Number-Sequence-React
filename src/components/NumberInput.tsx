@@ -15,6 +15,11 @@ const icons = {
     width: faPencil,
 };
 const NumberInput: React.FC<NumberInputInterface> = ({label, value, onChange, icon}) => {
+    /**
+     * By using regular expression, the user is not allowed to enter letters or any other characters apart from
+     * numbers in the input box.
+     * @param e
+     */
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const inputValue = e.target.value;
         if (/^\d*\.?\d*$/.test(inputValue)) {
