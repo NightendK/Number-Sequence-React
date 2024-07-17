@@ -6,6 +6,7 @@ interface TriangleAreaInterface {
     width: number;
 }
 
+
 const TriangleArea: React.FC<TriangleAreaInterface> = ({height, width}) => {
     const area = (height * width) / 2;
 

@@ -4,6 +4,12 @@ interface NumberSequenceInterface {
     number: number;
 }
 
+/**
+ *
+ * @param number = represents the input received from the user. Based on this number,
+ * the application will generate the appropriate sequence,
+ * @constructor
+ */
 const NumberSequence: React.FC<NumberSequenceInterface> = ({ number }) => {
     const sequence = Array.from({ length: number }, (_, i) => i + 1);
 
