@@ -1,4 +1,3 @@
-// src/TriangleArea.tsx
 import React from 'react';
 
 interface TriangleAreaInterface {

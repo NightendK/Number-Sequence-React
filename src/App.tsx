@@ -1,4 +1,3 @@
-// src/App.tsx
 import React, { useState } from 'react';
 import NumberInput from "./components/NumberInput";
 import NumberSequence from './components/NumberSequence';
