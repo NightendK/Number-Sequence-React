@@ -1,46 +1,76 @@
 /* src/App.css */
 
 .App {
-  text-align: center;
-  font-family: Arial, sans-serif;
-  margin: 20px;
+    text-align: center;
+    font-family: Arial;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 15px solid #ddd;
+    border-radius: 25px;
+    border-color: green;
+    background-color: antiquewhite;
+    color: green;
+    font-weight: bold;
+}
+
+body{
+    background-color: antiquewhite;
 }
 
 h1 {
-  color: cornflowerblue;
-  font-weight: 900;
+    color: green;
+    font-weight: bolder;
+    font-size: 25px;
 }
 
 h2 {
-  color: #555;
+    color: cornflowerblue;
 }
 
 label {
-  display: inline-block;
-  width: 80px;
-  text-align: right;
-  margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
-input[type="number"] {
-  padding: 5px;
-  font-size: 1em;
-  margin: 10px 0;
+input[type="text"] {
+    padding: 8px;
+    font-size: 1em;
+    margin-left: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-input[type="number"]::placeholder {
-  font-style: italic;
-  color: #aaa;
+input[type="text"]::placeholder {
+    font-style: italic;
+    font-weight:bolder;
+    color: cornflowerblue;
 }
 
 div.input-group {
-  margin-bottom: 15px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 p {
-  font-size: 1.2em;
+    font-size: 1.2em;
+    color: cornflowerblue;
 }
 
 .sequence, .triangle-area {
-  margin: 20px 0;
+    margin: 20px 0;
+    padding: 10px;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    border-color: green;
+    border-style: dashed;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
 }

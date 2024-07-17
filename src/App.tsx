@@ -1,9 +1,8 @@
 // src/App.tsx
 import React, { useState } from 'react';
-import NumberInput from './components/NumberInput';
+import NumberInput from "./components/NumberInput";
 import NumberSequence from './components/NumberSequence';
-import TriangleArea from "./components/Triangle";
-
+import Triangle from "./components/Triangle";
 import './App.css';
 
 const App: React.FC = () => {
@@ -29,12 +28,12 @@ const App: React.FC = () => {
 
     return (
         <div className="App">
-            <h1>Number and Triangle Area Generator</h1>
-            <NumberInput label="Number" value={inputNumber} onChange={handleInputNumberChange} />
+            <h1>Sequence and Triangle Area Generator</h1>
+            <NumberInput label="Number" value={inputNumber} onChange={handleInputNumberChange} icon="number" />
             <NumberSequence number={isNaN(parsedInputNumber) ? 0 : parsedInputNumber} />
-            <NumberInput label="Height" value={height} onChange={handleHeightChange} />
-            <NumberInput label="Width" value={width} onChange={handleWidthChange} />
-            <TriangleArea height={isNaN(parsedHeight) ? 0 : parsedHeight} width={isNaN(parsedWidth) ? 0 : parsedWidth} />
+            <NumberInput label="Height" value={height} onChange={handleHeightChange} icon="height" />
+            <NumberInput label="Width" value={width} onChange={handleWidthChange} icon="width" />
+            <Triangle height={isNaN(parsedHeight) ? 0 : parsedHeight} width={isNaN(parsedWidth) ? 0 : parsedWidth} />
         </div>
     );
 };

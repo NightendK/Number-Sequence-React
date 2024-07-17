@@ -12,7 +12,7 @@ const NumberSequence: React.FC<NumberSequenceInterface> = ({ number }) => {
             {number > 0 && (
                 <>
                     <h2>Sequence:</h2>
-                    <p>{sequence.join(', ')}</p>
+                    <p>{sequence.join('--->')}</p>
                 </>
             )}
         </div>

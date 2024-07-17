@@ -1,12 +1,20 @@
 import React from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faTerminal, faPencil} from '@fortawesome/free-solid-svg-icons';
 
 interface NumberInputInterface {
     label: string;
     value: number | string;
     onChange: (value: number | string) => void;
+    icon?: 'number' | 'height' | 'width';
 }
 
-const NumberInput: React.FC<NumberInputInterface> = ({ label, value, onChange }) => {
+const icons = {
+    number: faTerminal,
+    height: faPencil,
+    width: faPencil,
+};
+const NumberInput: React.FC<NumberInputInterface> = ({label, value, onChange, icon}) => {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const inputValue = e.target.value;
         if (/^\d*\.?\d*$/.test(inputValue)) {
@@ -16,8 +24,8 @@ const NumberInput: React.FC<NumberInputInterface> = ({ label, value, onChange })
 
     return (
         <div className="input-group">
-            <label>{label}: </label>
-            <input type="text" value={value} onChange={handleChange} placeholder="Enter number value" />
+            <label>{icon && <FontAwesomeIcon icon={icons[icon]} />} {label}:</label>
+            <input type="text" value={value} onChange={handleChange} placeholder="Enter number value"/>
         </div>
     );
 };
