@@ -24,8 +24,8 @@ const NumberInput: React.FC<NumberInputInterface> = ({label, value, onChange, ic
 
     return (
         <div className="input-group">
-            <label>{icon && <FontAwesomeIcon icon={icons[icon]} />} {label}:</label>
-            <input type="text" value={value} onChange={handleChange} placeholder="Enter number value"/>
+            <label htmlFor="numberInput">{icon && <FontAwesomeIcon icon={icons[icon]} />} {label}:</label>
+            <input id="numberInput" type="text" value={value} onChange={handleChange} placeholder="Enter number value"/>
         </div>
     );
 };
