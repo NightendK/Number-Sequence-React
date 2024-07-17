@@ -7,7 +7,7 @@ interface TriangleAreaInterface {
 }
 
 
-const TriangleArea: React.FC<TriangleAreaInterface> = ({height, width}) => {
+const Triangle: React.FC<TriangleAreaInterface> = ({height, width}) => {
     const area = (height * width) / 2;
 
     return (
@@ -22,4 +22,4 @@ const TriangleArea: React.FC<TriangleAreaInterface> = ({height, width}) => {
     );
 };
 
-export default TriangleArea;
+export default Triangle;

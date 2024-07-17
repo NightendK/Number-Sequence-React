@@ -18,7 +18,6 @@ const NumberInput: React.FC<NumberInputInterface> = ({label, value, onChange, ic
     /**
      * By using regular expression, the user is not allowed to enter letters or any other characters apart from
      * numbers in the input box.
-     * @param e
      */
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const inputValue = e.target.value;
@@ -29,7 +28,7 @@ const NumberInput: React.FC<NumberInputInterface> = ({label, value, onChange, ic
 
     return (
         <div className="input-group">
-            <label htmlFor="numberInput">{icon && <FontAwesomeIcon icon={icons[icon]} />} {label}:</label>
+            <label htmlFor="numberInput">{icon && <FontAwesomeIcon icon={icons[icon]}/>} {label}:</label>
             <input id="numberInput" type="text" value={value} onChange={handleChange} placeholder="Enter number value"/>
         </div>
     );
